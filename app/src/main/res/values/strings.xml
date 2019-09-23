@@ -21,4 +21,7 @@
     <string name="about">About</string>
     <string name="aboutInfo">Tic-Tac-Toe by Juan Guillermo Carvajal</string>
     <string name="ok">Ok</string>
+    <string name="new_game_string">New game</string>
+    <string name="difficulty">Difficulty</string>
+    <string name="quit">Quit</string>
 </resources>
