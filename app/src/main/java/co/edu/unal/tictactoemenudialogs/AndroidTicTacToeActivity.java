@@ -14,6 +14,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -38,6 +39,7 @@ public class AndroidTicTacToeActivity extends AppCompatActivity {
     static final int DIALOG_ABOUT_ID = 2;
 
     private int mSelectedIndex;
+    ImageView image;
 
 
 
@@ -120,6 +122,9 @@ public class AndroidTicTacToeActivity extends AppCompatActivity {
             case R.id.quit:
                 showDialog(DIALOG_QUIT_ID);
                 return true;
+            case R.id.about:
+                showDialog(DIALOG_ABOUT_ID);
+                return true;
         }
         return false;
     }
@@ -162,6 +167,7 @@ public class AndroidTicTacToeActivity extends AppCompatActivity {
                                         break;
                                 }
 
+                                startNewGame();
 
                                 // Display the selected difficulty level
                                 Toast.makeText(getApplicationContext(), levels[item],
@@ -184,6 +190,17 @@ public class AndroidTicTacToeActivity extends AppCompatActivity {
                         })
                         .setNegativeButton(R.string.no, null);
                 dialog = builder.create();
+
+                break;
+
+            case DIALOG_ABOUT_ID:
+                Context context = getApplicationContext();
+                LayoutInflater inflater = (LayoutInflater) context.getSystemService(LAYOUT_INFLATER_SERVICE);
+                View layout = inflater.inflate(R.layout.about_dialog, null);
+                builder.setView(layout);
+                builder.setPositiveButton("OK", null);
+                dialog = builder.create();
+
 
                 break;
         }
