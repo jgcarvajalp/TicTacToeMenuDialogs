@@ -1,15 +1,21 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/new_game"
         android:icon="@drawable/new_game"
-        android:title="New Game" />
+        android:title="New Game"
+        app:showAsAction="ifRoom"/>
     <item android:id="@+id/ai_difficulty"
         android:title="Difficulty"
-        android:icon="@drawable/difficulty_level"  />
-    <item android:id="@+id/quit"
-        android:title="Quit"
-        android:icon="@drawable/quit_game" />
+        android:icon="@drawable/difficulty_level"
+        app:showAsAction="ifRoom"/>
     <item android:id="@+id/about"
         android:title="About"
-        android:icon="@drawable/about" />
+        android:icon="@drawable/about"
+        app:showAsAction="ifRoom"/>
+    <item android:id="@+id/quit"
+        android:title="Quit"
+        android:icon="@drawable/quit_game"
+        app:showAsAction="ifRoom"/>
+
 </menu>
