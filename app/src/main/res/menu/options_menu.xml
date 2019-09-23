@@ -1,7 +1,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/new_game"
-        android:title="New Game"
-        android:icon="@drawable/new_game" />
+    <item
+        android:id="@+id/new_game"
+        android:icon="@drawable/new_game"
+        android:title="New Game" />
     <item android:id="@+id/ai_difficulty"
         android:title="Difficulty"
         android:icon="@drawable/difficulty_level"  />
